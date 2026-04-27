@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact The Window Shop of North Indy | Carmel, IN | Free Estimate | Vercel</title>
+  <meta name="description" content="Contact The Window Shop of North Indy for a free window estimate in Carmel, Fishers & all of North Indy. Call (317) 689-0759 or request online.">
+  <link rel="icon" type="image/webp" href="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1a3a5c;--blue-mid:#1e5080;--blue-light:#2a6fa8;--yellow:#f5c518;--yellow-dark:#d4a800;--white:#ffffff;--off-white:#f7f8fa;--gray:#6b7280;--dark:#111827;--border:#e5e7eb;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+
+    header{position:sticky;top:0;z-index:100;background:var(--blue);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 16px rgba(0,0,0,.18);}
+    .logo img{height:44px;width:auto;}
+    nav{display:flex;gap:28px;align-items:center;}
+    nav a{color:rgba(255,255,255,.88);font-size:.9rem;font-weight:500;transition:color .2s;}
+    nav a:hover{color:var(--yellow);}
+    .nav-cta{background:var(--yellow);color:var(--blue)!important;font-weight:600!important;padding:9px 20px;border-radius:4px;font-size:.875rem!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--blue);padding:20px 5%;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:99;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav a{color:rgba(255,255,255,.9);font-size:1rem;font-weight:500;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+
+    .page-hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 100%);padding:76px 5% 64px;text-align:center;}
+    .page-hero p.label{color:rgba(245,197,24,.9);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+    .page-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,5vw,3rem);color:var(--white);line-height:1.2;margin-bottom:16px;}
+    .page-hero .lead{color:rgba(255,255,255,.78);max-width:560px;margin:0 auto;font-size:1.02rem;font-weight:300;}
+
+    section{padding:72px 5%;}
+    .section-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-light);margin-bottom:10px;}
+    h2.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--blue);line-height:1.25;margin-bottom:16px;}
+
+    .cta-cards-bg{background:var(--off-white);}
+    .cta-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto;}
+    .cta-card{background:var(--white);border-radius:10px;padding:32px 26px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.07);border-bottom:3px solid var(--yellow);transition:transform .2s,box-shadow .2s;}
+    .cta-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);}
+    .cta-card-icon{font-size:2.4rem;margin-bottom:14px;}
+    .cta-card h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--blue);margin-bottom:8px;}
+    .cta-card p{font-size:.88rem;color:var(--gray);margin-bottom:18px;}
+    .cta-card a.btn-card{display:inline-block;background:var(--blue);color:#fff;padding:10px 22px;border-radius:4px;font-size:.875rem;font-weight:600;transition:background .2s;}
+    .cta-card a.btn-card:hover{background:var(--blue-light);}
+
+    .info-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;max-width:1000px;margin:0 auto;}
+    .info-col h2{margin-bottom:24px;}
+    .info-rows{display:flex;flex-direction:column;gap:18px;}
+    .info-row{display:flex;gap:14px;align-items:flex-start;}
+    .info-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px;color:var(--blue-light);}
+    .info-row-body strong{display:block;font-size:.95rem;color:var(--dark);}
+    .info-row-body p{font-size:.875rem;color:var(--gray);margin-top:2px;}
+    .info-row-body a{color:var(--blue-light);}
+    .hours-table{width:100%;border-collapse:collapse;margin-top:8px;}
+    .hours-table tr{border-bottom:1px solid var(--border);}
+    .hours-table td{padding:9px 4px;font-size:.875rem;color:var(--gray);}
+    .hours-table td:last-child{text-align:right;font-weight:500;color:var(--dark);}
+    .hours-col{background:var(--off-white);border-radius:8px;padding:24px 22px;}
+
+    .form-bg{background:var(--blue);}
+    .form-inner{max-width:900px;margin:0 auto;}
+    .form-inner .section-label{color:rgba(245,197,24,.9);}
+    .form-inner h2{color:#fff;margin-bottom:10px;}
+    .form-desc{color:rgba(255,255,255,.72);margin-bottom:28px;font-size:.97rem;}
+    .form-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:8px;overflow:hidden;}
+    .form-box iframe{display:block;width:100%;border:none;border-radius:6px;}
+
+    .embeds-inner{max-width:1000px;margin:0 auto;}
+    .reviews-box{background:var(--off-white);border-radius:10px;padding:28px;}
+
+    .maps-inner{max-width:1000px;margin:0 auto;}
+    .maps-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px;}
+    .map-box{border:2px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.07);}
+    .map-box iframe{display:block;width:100%;height:300px;}
+    .map-label{background:var(--blue);color:#fff;padding:12px 18px;font-size:.875rem;font-weight:600;}
+
+    .areas-bg{background:var(--off-white);}
+    .areas-inner{max-width:800px;margin:0 auto;text-align:center;}
+    .areas-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px;}
+    .area-pill{background:var(--white);border:1px solid var(--border);color:var(--blue);padding:7px 16px;border-radius:30px;font-size:.875rem;font-weight:500;}
+
+    footer{background:var(--dark);color:rgba(255,255,255,.65);padding:48px 5% 28px;}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 36px;}
+    .footer-brand p{font-size:.88rem;margin-top:14px;line-height:1.7;}
+    .footer-brand img{height:38px;}
+    .footer-col h4{color:#fff;font-size:.9rem;font-weight:600;margin-bottom:14px;}
+    .footer-col a{display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:8px;transition:color .2s;}
+    .footer-col a:hover{color:var(--yellow);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;text-align:center;font-size:.82rem;max-width:1100px;margin:0 auto;}
+
+    @media(max-width:900px){
+      nav{display:none;}.hamburger{display:flex;}
+      .cta-cards,.info-inner,.maps-grid{grid-template-columns:1fr;}
+      .footer-inner{grid-template-columns:1fr 1fr;}
+      .footer-brand{grid-column:1/-1;}
+    }
+    @media(max-width:600px){.footer-inner{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><img src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp" alt="The Window Shop of North Indy Logo"></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Free Quote</a>
+  </nav>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get Free Quote</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <p class="label">Get In Touch</p>
+  <h1>We'd Love to Help With Your Windows</h1>
+  <p class="lead">Reach out any time. We'll get back to you quickly and schedule a free in-home estimate that fits your schedule.</p>
+</div>
+
+<!-- CTA CARDS -->
+<section class="cta-cards-bg">
+  <div class="cta-cards">
+    <div class="cta-card">
+      <div class="cta-card-icon">&#128222;</div>
+      <h3>Call Us</h3>
+      <p>Talk directly with our team. We answer questions and book estimates over the phone.</p>
+      <a href="tel:+13176890759" class="btn-card">(317) 689-0759</a>
+    </div>
+    <div class="cta-card">
+      <div class="cta-card-icon">&#127973;</div>
+      <h3>Get Directions</h3>
+      <p>Our office is in Carmel, IN. Find us on Google Maps for easy turn-by-turn directions.</p>
+      <a href="https://maps.google.com/?q=550+Congressional+Blvd+Carmel+IN+46032" target="_blank" rel="noopener" class="btn-card">Get Directions</a>
+    </div>
+    <div class="cta-card">
+      <div class="cta-card-icon">&#9993;</div>
+      <h3>Email Us</h3>
+      <p>Send a message anytime and we'll get back to you with answers and next steps.</p>
+      <a href="mailto:hello@windowshopindy.com" class="btn-card">Send Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT INFO + HOURS -->
+<section>
+  <div class="info-inner">
+    <div class="info-col">
+      <p class="section-label">Our Information</p>
+      <h2 class="section-title">Contact Details</h2>
+      <div class="info-rows">
+        <div class="info-row"><span class="info-icon">&#128205;</span><div class="info-row-body"><strong>550 Congressional Blvd, Suite 390 #1101</strong><p>Carmel, IN 46032</p></div></div>
+        <div class="info-row"><span class="info-icon">&#128222;</span><div class="info-row-body"><strong><a href="tel:+13176890759">(317) 689-0759</a></strong><p>Mon &ndash; Fri 8AM to 7PM, Sat 10AM to 4PM</p></div></div>
+        <div class="info-row"><span class="info-icon">&#9993;</span><div class="info-row-body"><strong><a href="mailto:hello@windowshopindy.com">hello@windowshopindy.com</a></strong><p>We respond promptly</p></div></div>
+        <div class="info-row"><span class="info-icon">&#127758;</span><div class="info-row-body"><strong>Service Area</strong><p>Carmel, Indianapolis, Fishers, Westfield, Noblesville, Zionsville &amp; surrounding North Indy communities</p></div></div>
+      </div>
+    </div>
+    <div class="info-col">
+      <p class="section-label">When We're Open</p>
+      <h2 class="section-title">Business Hours</h2>
+      <div class="hours-col">
+        <table class="hours-table">
+          <tr><td>Monday</td><td>8:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>8:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>8:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Thursday</td><td>8:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM &ndash; 7:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM &ndash; 4:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE FORM -->
+<section class="form-bg">
+  <div class="form-inner">
+    <p class="section-label">Free Estimate</p>
+    <h2 class="section-title">Request Your No-Obligation Quote</h2>
+    <p class="form-desc">Tell us about your project and we'll schedule a free in-home visit. Expect a response within one business day.</p>
+    <div class="form-box">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf5txjM_sLoLoAosz-Mbona62WvaoquJRAldv3ej3zLSSBmPA/viewform?embedded=true" width="640" height="2796" frameborder="0" marginheight="0" marginwidth="0" title="Contact Form">Loading&hellip;</iframe>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS EMBED -->
+<section>
+  <div class="embeds-inner">
+    <p class="section-label">What Neighbors Say</p>
+    <h2 class="section-title">Homeowners Across North Indy Agree</h2>
+    <div class="reviews-box">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-fc86a9ca-ff02-409d-ba64-0a9c0600e740"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPS -->
+<section style="background:var(--off-white);">
+  <div class="maps-inner">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Our Location &amp; Service Area</h2>
+    <div class="maps-grid">
+      <div class="map-box">
+        <div class="map-label">&#128205; Office &mdash; Carmel, IN 46032</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783999.3978116135!2d-86.74597922796721!3d39.863089490369454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4e8eaad7a870235%3A0xe9b79f84567f61e4!2sThe%20Window%20Shop%20of%20North%20Indy!5e0!3m2!1sen!2s!4v1777235052177!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" title="Office Location"></iframe>
+      </div>
+      <div class="map-box">
+        <div class="map-label">&#127758; North Indy Service Coverage</div>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1jvKICkbkMDeRgA3olRwTYHpVlSt-zX8&ehbc=2E312F" style="border:0;" loading="lazy" title="Service Area Map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-bg">
+  <div class="areas-inner">
+    <p class="section-label">Where We Serve</p>
+    <h2 class="section-title">Our Service Area</h2>
+    <div class="areas-grid">
+      <span class="area-pill">Carmel, IN</span><span class="area-pill">Indianapolis, IN</span><span class="area-pill">Fishers, IN</span>
+      <span class="area-pill">Westfield, IN</span><span class="area-pill">Noblesville, IN</span><span class="area-pill">Zionsville, IN</span>
+      <span class="area-pill">Hamilton County</span><span class="area-pill">Boone County</span><span class="area-pill">Northern Marion County</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp" alt="The Window Shop of North Indy">
+      <p>Locally owned window and door replacement company serving Carmel, Indianapolis, Fishers, Westfield, Noblesville, Zionsville, and all of North Central Indiana.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html">Free Quote</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+13176890759">(317) 689-0759</a>
+      <a href="mailto:hello@windowshopindy.com">hello@windowshopindy.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 The Window Shop of North Indy. All rights reserved.</p></div>
+</footer>
+
+<script>
+  const btn=document.getElementById('menuBtn');
+  const nav=document.getElementById('mobileNav');
+  btn.addEventListener('click',()=>nav.classList.toggle('open'));
+</script>
+</body>
+</html>

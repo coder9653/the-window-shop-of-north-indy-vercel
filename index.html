@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Replacement Carmel IN | The Window Shop of North Indy | Vercel</title>
+  <meta name="description"
+    content="Window replacement in Carmel, IN and all of North Indy. Locally owned, energy-efficient windows, transparent pricing. Call (317) 689-0759.">
+  <link rel="icon" type="image/webp"
+    href="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1a3a5c;
+      --blue-mid: #1e5080;
+      --blue-light: #2a6fa8;
+      --yellow: #f5c518;
+      --yellow-dark: #d4a800;
+      --white: #ffffff;
+      --off-white: #f7f8fa;
+      --gray: #6b7280;
+      --dark: #111827;
+      --border: #e5e7eb;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blue);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, .18);
+    }
+
+    .logo img {
+      height: 44px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      color: rgba(255, 255, 255, .88);
+      font-size: .9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-cta {
+      background: var(--yellow);
+      color: var(--blue) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: .875rem !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--blue);
+      padding: 20px 5%;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+      z-index: 99;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      color: rgba(255, 255, 255, .9);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background: url('https://lh3.googleusercontent.com/p/AF1QipOFjWyre61uqJbkL_Kq1aryRL_9ajIdheiHQWcg=s1360-w1360-h1020-rw') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, rgba(18, 42, 72, .91) 0%, rgba(26, 58, 92, .78) 55%, rgba(26, 58, 92, .45) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      padding: 60px 5%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 197, 24, .15);
+      border: 1px solid rgba(245, 197, 24, .4);
+      color: var(--yellow);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      color: var(--white);
+      line-height: 1.18;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .hero h1 em {
+      color: var(--yellow);
+      font-style: italic;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, .82);
+      font-size: 1.08rem;
+      max-width: 540px;
+      margin-bottom: 34px;
+      font-weight: 300;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 14px 28px;
+      border-radius: 4px;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(255, 255, 255, .55);
+      color: var(--white);
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 13px 26px;
+      border-radius: 4px;
+      transition: border-color .2s, background .2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .stats {
+      background: var(--blue);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+
+    .stat-item {
+      padding: 28px 16px;
+      border-right: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.1rem;
+      color: var(--yellow);
+    }
+
+    .stat-label {
+      color: rgba(255, 255, 255, .72);
+      font-size: .82rem;
+      margin-top: 4px;
+    }
+
+    section {
+      padding: 72px 5%;
+    }
+
+    .section-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 10px;
+    }
+
+    h2.section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      color: var(--blue);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      color: var(--gray);
+      max-width: 560px;
+      font-size: 1rem;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 16px;
+      font-size: .97rem;
+    }
+
+    .about-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--off-white);
+      padding: 16px 18px;
+      border-radius: 6px;
+      border-left: 3px solid var(--yellow);
+    }
+
+    .pillar-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .pillar-title {
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--blue);
+    }
+
+    .pillar-text {
+      font-size: .88rem;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+
+    .about-visual {
+      background: var(--off-white);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .about-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--blue);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-size: .85rem;
+      line-height: 1.4;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+    }
+
+    .about-badge strong {
+      color: var(--yellow);
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .title-link {
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .services-bg {
+      background: var(--off-white);
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 44px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .1);
+    }
+
+    .service-card-img {
+      height: 190px;
+      overflow: hidden;
+      background: var(--blue);
+    }
+
+    .service-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-card-body {
+      padding: 22px 22px 26px;
+    }
+
+    .service-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: .9rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: .875rem;
+      font-weight: 600;
+      color: var(--blue-light);
+    }
+
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .why-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .why-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .why-item-text h4 {
+      font-weight: 600;
+      font-size: .97rem;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .why-item-text p {
+      font-size: .88rem;
+      color: var(--gray);
+    }
+
+    .why-visual {
+      background: var(--blue);
+      border-radius: 10px;
+      padding: 40px 36px;
+      color: #fff;
+    }
+
+    .why-visual h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .why-visual p {
+      color: rgba(255, 255, 255, .78);
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .why-cta-box {
+      background: var(--yellow);
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-top: 24px;
+    }
+
+    .why-cta-box p {
+      color: var(--blue) !important;
+      font-weight: 600;
+      font-size: .95rem;
+      margin: 0;
+    }
+
+    .why-cta-box a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* GOOGLE PROPERTIES */
+    .gprops-bg {
+      background: var(--off-white);
+    }
+
+    .gprops-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gprops-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 32px;
+    }
+
+    .gprop-box {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .07);
+      border: 1px solid var(--border);
+    }
+
+    .gprop-label {
+      background: var(--blue);
+      color: #fff;
+      padding: 12px 18px;
+      font-size: .875rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gprop-label span {
+      background: var(--yellow);
+      color: var(--blue);
+      border-radius: 3px;
+      padding: 2px 7px;
+      font-size: .75rem;
+      font-weight: 700;
+    }
+
+    .gprop-box iframe,
+    .gprop-box-full iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    .gprop-box-full {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .07);
+      border: 1px solid var(--border);
+      margin-top: 28px;
+    }
+
+    .info-bg {
+      background: var(--blue);
+    }
+
+    .info-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .info-block h2 {
+      color: #fff;
+    }
+
+    .info-block .section-label {
+      color: rgba(245, 197, 24, .9);
+    }
+
+    .info-details {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-row-text p {
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .65);
+      margin-top: 2px;
+    }
+
+    .info-row-text strong {
+      color: #fff;
+      font-size: .95rem;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 20px;
+      margin-top: 20px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .8);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .info-embed {
+      background: rgba(255, 255, 255, .05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .info-embed iframe {
+      display: block;
+      width: 100%;
+    }
+
+    .areas-bg {
+      background: var(--off-white);
+    }
+
+    .areas-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .area-pill {
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--blue);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: .875rem;
+      font-weight: 500;
+      transition: background .2s, border-color .2s;
+    }
+
+    .area-pill:hover {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    .reviews-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .reviews-embed {
+      background: var(--off-white);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .findus-bg {
+      background: var(--blue);
+    }
+
+    .findus-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .findus-inner .section-label {
+      color: rgba(245, 197, 24, .9);
+    }
+
+    .findus-inner h2 {
+      color: #fff;
+      margin-bottom: 32px;
+    }
+
+    .findus-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .findus-link {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .18);
+      color: rgba(255, 255, 255, .85);
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: .78rem;
+      transition: background .2s, color .2s;
+      word-break: break-all;
+    }
+
+    .findus-link:hover {
+      background: var(--yellow);
+      color: var(--blue);
+      border-color: var(--yellow);
+    }
+
+    .contact-preview {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+      text-align: center;
+      padding: 80px 5%;
+    }
+
+    .contact-preview h2 {
+      font-family: 'DM Serif Display', serif;
+      color: #fff;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      margin-bottom: 14px;
+    }
+
+    .contact-preview p {
+      color: rgba(255, 255, 255, .78);
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+
+    .contact-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .maps-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .maps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .map-box {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    }
+
+    .map-box iframe {
+      display: block;
+      width: 100%;
+      height: 320px;
+    }
+
+    .map-label {
+      background: var(--blue);
+      color: #fff;
+      padding: 12px 18px;
+      font-size: .875rem;
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, .65);
+      padding: 48px 5% 28px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto 36px;
+    }
+
+    .footer-brand p {
+      font-size: .88rem;
+      margin-top: 14px;
+      line-height: 1.7;
+    }
+
+    .footer-brand img {
+      height: 38px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: .875rem;
+      color: rgba(255, 255, 255, .6);
+      margin-bottom: 8px;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding-top: 20px;
+      text-align: center;
+      font-size: .82rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @media(max-width:900px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .about-inner,
+      .why-inner,
+      .info-inner,
+      .maps-grid,
+      .gprops-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1/-1;
+      }
+    }
+
+    @media(max-width:600px) {
+
+      .services-grid,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo"><img
+        src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp"
+        alt="The Window Shop of North Indy Logo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Free Quote</a>
+    </nav>
+    <button class="hamburger" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html">Get Free Quote</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">&#10003; Locally Owned &amp; Operated</div>
+      <h1><em>Carmel &amp; North Indy's</em> Window Replacement Specialists.</h1>
+      <p>Full window and door replacement handled by a local owner-operated team. Transparent pricing, high-performance products, and clean professional installs throughout Hamilton and Boone Counties.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-primary">Get a Free Estimate</a>
+        <a href="about.html" class="btn-outline">See Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5&#9733;</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Local &amp; Honest</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Free</div>
+      <div class="stat-label">In-Home Estimates</div>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <section>
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Your Neighbors in the Window Business</h2>
+        <p><a href="https://sites.google.com/view/the-window-shop-of-north-indy/" target="_blank" rel="noopener" style="color:var(--blue);text-decoration:underline;text-underline-offset:3px;">The Window Shop of North Indy</a> is owned and run by Ward Walker, a Carmel-area resident who built this company around a single commitment: give homeowners the honest experience they deserve when replacing their windows.</p>
+        <p>We work exclusively in full window and door replacement. That focus means our process is streamlined, our team is experienced, and our results are consistent across every home in our service area.</p>
+        <div class="about-pillars">
+          <div class="pillar"><span class="pillar-icon">&#9788;</span>
+            <div>
+              <div class="pillar-title">Owner-Operated Service</div>
+              <div class="pillar-text">We skip the sales games. Straightforward advice and fair pricing, every time.
+              </div>
+            </div>
+          </div>
+          <div class="pillar"><span class="pillar-icon">&#127981;</span>
+            <div>
+              <div class="pillar-title">Top Energy Performance</div>
+              <div class="pillar-text">Our windows are selected for performance. Lower energy bills, better comfort,
+                real results.</div>
+            </div>
+          </div>
+          <div class="pillar"><span class="pillar-icon">&#128275;</span>
+            <div>
+              <div class="pillar-title">Clean, Careful Installs</div>
+              <div class="pillar-text">Built to last through Indiana winters and everything else the seasons throw at
+                them.</div>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" style="display:inline-block;margin-top:26px;" class="btn-primary">Our Story</a>
+      </div>
+      <div class="about-visual">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipOFjWyre61uqJbkL_Kq1aryRL_9ajIdheiHQWcg=s1360-w1360-h1020-rw"
+          alt="Window installation in Indianapolis" loading="lazy">
+        <div class="about-badge"><strong>Locally Owned</strong>Ward Walker, Owner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-bg">
+    <div class="services-header">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Window &amp; Door Replacement Services</h2>
+      <p class="section-sub">Full replacement only. No patch jobs. We install premium windows and doors that perform for
+        decades.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-img"><img
+            src="https://windowshopindy.com/wp-content/uploads/2025/10/InVision-6800-gallery-1.webp"
+            alt="Double Hung Windows Indianapolis" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3>Double Hung Windows</h3>
+          <p>A timeless design that opens from both top and bottom. Easy to clean, great for airflow, and available in
+            styles that complement any home in the Indianapolis area.</p><span class="service-link">Learn More
+            &rarr;</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img
+            src="https://windowshopindy.com/wp-content/uploads/2025/10/sliding-windows.webp"
+            alt="Sliding Windows Indianapolis" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3>Sliding Windows</h3>
+          <p>Smooth horizontal operation with wide glass panels for open views. A great fit for living rooms, bedrooms,
+            and spaces where you want maximum natural light.</p><span class="service-link">Learn More &rarr;</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img
+            src="https://windowshopindy.com/wp-content/uploads/2025/10/casement-awning-hero-scaled-e1764601332138.webp"
+            alt="Casement Windows Indianapolis" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3>Casement &amp; Awning Windows</h3>
+          <p>Open outward on a hinge and seal tightly when closed, making them some of the most energy-efficient options
+            available. Smart choice for Indiana's cold winters.</p><span class="service-link">Learn More &rarr;</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="https://windowshopindy.com/wp-content/uploads/2025/10/embarq.webp"
+            alt="Entry Door Replacement Indianapolis" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3>Entry Door Replacement</h3>
+          <p>Your front door is the first thing people notice. We install strong, well-crafted entry doors built for
+            security, weather performance, and curb appeal that lasts.</p><span class="service-link">Learn More
+            &rarr;</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img
+            src="https://windowshopindy.com/wp-content/uploads/2025/10/4202-vinyl-door-1-1.webp"
+            alt="Patio Door Replacement Indianapolis" loading="lazy"></div>
+        <div class="service-card-body">
+          <h3>Patio Door Replacement</h3>
+          <p>Bring more light and connection between your indoor and outdoor spaces. Our patio doors are durable,
+            thermally efficient, and designed to look great year after year.</p><span class="service-link">Learn More
+            &rarr;</span>
+        </div>
+      </div>
+      <div class="service-card" style="background:var(--blue);">
+        <div class="service-card-body" style="padding-top:40px;">
+          <h3 style="color:#fff;font-size:1.5rem;">Not sure which window is right for you?</h3>
+          <p style="color:rgba(255,255,255,.78);margin-top:8px;">We'll come to your home, walk through your options, and
+            give you honest advice with no pressure.</p><a href="contact.html" class="btn-primary"
+            style="margin-top:22px;display:inline-block;">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section>
+    <div class="why-inner">
+      <div>
+        <p class="section-label">Why Homeowners Choose Us</p>
+        <h2 class="section-title">Replacing Windows in Carmel and North Indy Since Day One</h2>
+        <p class="section-sub">We do one thing and we do it well. Here's why homeowners keep choosing us.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div class="why-item-text">
+              <h4>Owner Picks Up the Phone</h4>
+              <p>Ward Walker is reachable throughout your project. Questions get answered by the person doing the work.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div class="why-item-text">
+              <h4>Industry-Leading Efficiency</h4>
+              <p>Our windows are among the most energy-efficient residential products available in the market today.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div class="why-item-text">
+              <h4>Precision Installation</h4>
+              <p>Properly installed windows perform better and last longer. Our team doesn't rush or cut corners.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div class="why-item-text">
+              <h4>Clear, Honest Quotes</h4>
+              <p>We give you one price and stick to it. No tactics, no limited-time pressure, no added fees.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">&#10003;</div>
+            <div class="why-item-text">
+              <h4>Comprehensive Warranty</h4>
+              <p>Every install includes lifetime frame coverage, 12-year glass seal warranty, and a 5-year labor guarantee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <h3>The Right Windows Make a Real Difference</h3>
+        <p>A quality window replacement isn't just about looks. It's about sealing your home against Indiana's cold winters, reducing noise from outside, and cutting monthly energy costs that add up fast.</p>
+        <p>Homeowners across Carmel, Westfield, and Zionsville have seen the difference firsthand. Better insulation, quieter rooms, and noticeably lower utility bills from the very first season.</p>
+        <div class="why-cta-box">
+          <p>Call us: <a href="tel:+13176890759">(317) 689-0759</a> or <a href="contact.html">request a free estimate
+              online</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE PROPERTIES -->
+  <section class="gprops-bg">
+    <div class="gprops-inner">
+      <p class="section-label">Google Properties</p>
+      <h2 class="section-title">Explore Our Resources</h2>
+      <div class="gprops-grid">
+        <div class="gprop-box">
+          <div class="gprop-label">&#128444; <span>Google Drawing</span> Service Overview</div>
+          <iframe src="https://docs.google.com/drawings/d/1Ws2ajKTc6aomWleLCTfxlZ0qHVM-PdZzjmCEnWDMDhw/preview"
+            height="340" loading="lazy" title="Window Shop Service Drawing"></iframe>
+        </div>
+        <div class="gprop-box">
+          <div class="gprop-label">&#127973; <span>Google Slides</span> Our Window Solutions</div>
+          <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vSYJR8yBEAvYdJaS2BIZTG57Q9oLF7BZrbWjJ8i2fZ4l2hbOz2Ra_BJDcuzicUi6-0ODGFf7qnuBZCE/embed?start=true&loop=true&delayms=3000"
+            height="340" allowfullscreen="true" loading="lazy" title="Window Solutions Presentation"></iframe>
+        </div>
+      </div>
+      <div class="gprop-box-full">
+        <div class="gprop-label">&#128196; <span>Google Doc</span> Company Information</div>
+        <iframe
+          src="https://docs.google.com/document/d/e/2PACX-1vQpgnr_KsvXanGfG8pv0kWCQwZfidb3OEiMrL614EB1s9UIhODQunwTu3jsMdHo1zrwXTxd2gpWhOO5/pub?embedded=true"
+          height="400" loading="lazy" title="Company Info Document"></iframe>
+      </div>
+      <div class="gprop-box-full">
+        <div class="gprop-label">&#128197; <span>Google Calendar</span> Schedule &amp; Availability</div>
+        <iframe src="https://calendar.google.com/calendar/embed?src=windowshopindy%40gmail.com&ctz=America%2FNew_York"
+          height="500" loading="lazy" title="Appointment Calendar"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS INFO -->
+  <section class="info-bg">
+    <div class="info-inner">
+      <div class="info-block">
+        <p class="section-label">Find Us</p>
+        <h2 class="section-title" style="color:#fff;">Visit or Reach Out Anytime</h2>
+        <div class="info-details">
+          <div class="info-row"><span class="info-icon">&#128205;</span>
+            <div class="info-row-text"><strong>550 Congressional Blvd, Suite 390 #1101</strong>
+              <p>Carmel, IN 46032</p>
+            </div>
+          </div>
+          <div class="info-row"><span class="info-icon">&#128222;</span>
+            <div class="info-row-text"><strong><a href="tel:+13176890759" style="color:#fff;">(317)
+                  689-0759</a></strong>
+              <p>Talk directly with our team</p>
+            </div>
+          </div>
+          <div class="info-row"><span class="info-icon">&#9993;</span>
+            <div class="info-row-text"><strong><a href="mailto:hello@windowshopindy.com"
+                  style="color:#fff;">hello@windowshopindy.com</a></strong>
+              <p>We respond quickly</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:28px;">
+          <p
+            style="color:rgba(255,255,255,.6);font-size:.85rem;margin-bottom:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">
+            Business Hours</p>
+          <div class="hours-grid">
+            <div class="hours-row"><span>Monday &ndash; Friday</span><span>8AM &ndash; 7PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>10AM &ndash; 4PM</span></div>
+            <div class="hours-row" style="grid-column:1/-1;"><span>Sunday</span><span>Closed</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="info-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783999.3978116135!2d-86.74597922796721!3d39.863089490369454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4e8eaad7a870235%3A0xe9b79f84567f61e4!2sThe%20Window%20Shop%20of%20North%20Indy!5e0!3m2!1sen!2s!4v1777235052177!5m2!1sen!2s"
+          height="380" style="border:0;" allowfullscreen="" loading="lazy"
+          title="The Window Shop of North Indy Map"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="areas-bg">
+    <div class="areas-inner">
+      <p class="section-label">Where We Work</p>
+      <h2 class="section-title">Serving All of North Central Indiana</h2>
+      <p class="section-sub">We serve homeowners across Hamilton, Boone, and northern Marion Counties. If you're in
+        North Indy, we've got you covered.</p>
+      <div class="areas-grid">
+        <span class="area-pill">Carmel, IN</span><span class="area-pill">Indianapolis, IN</span><span
+          class="area-pill">Fishers, IN</span>
+        <span class="area-pill">Westfield, IN</span><span class="area-pill">Noblesville, IN</span><span
+          class="area-pill">Zionsville, IN</span>
+        <span class="area-pill">Hamilton County</span><span class="area-pill">Boone County</span><span
+          class="area-pill">Northern Marion County</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section>
+    <div class="reviews-inner">
+      <p class="section-label">What Homeowners Say</p>
+      <h2 class="section-title">Real Reviews from Real Neighbors</h2>
+      <div class="reviews-embed">
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-fc86a9ca-ff02-409d-ba64-0a9c0600e740"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO FIND US ON -->
+  <section class="findus-bg">
+    <div class="findus-inner">
+      <p class="section-label">Our Online Presence</p>
+      <h2 class="section-title">Also Find Us On</h2>
+      <div class="findus-links">
+      <a href="https://the-window-shop-of-north-indy.netlify.app/" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy.netlify.app/</a>
+      <a href="https://the-window-shop-of-north-indy.storage.googleapis.com/index.html" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy.storage.googleapis.com/</a>
+      <a href="https://coder9653.github.io/the-window-shop-of-north-indy/" class="findus-link" target="_blank" rel="noopener">coder9653.github.io/the-window-shop-of-north-indy/</a>
+      <a href="https://the-window-shop-of-north-indy.pages.dev/" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy.pages.dev/</a>
+      <a href="https://the-window-shop-of-north-indy.web.app/" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy.web.app/</a>
+      <a href="https://the-window-shop-of-north-indy.surge.sh/" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy.surge.sh/</a>
+      <a href="https://f002.backblazeb2.com/file/the-window-shop-of-north-indy/index.html" class="findus-link" target="_blank" rel="noopener">f002.backblazeb2.com/file/the-window-shop-of-north-indy/</a>
+      <a href="https://the-window-shop-of-north-indy-c37f93.gitlab.io/" class="findus-link" target="_blank" rel="noopener">the-window-shop-of-north-indy-c37f93.gitlab.io/</a>
+    </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW -->
+  <div class="contact-preview">
+    <h2>Start With a No-Pressure Free Quote</h2>
+    <p>No pressure, no obligation. We'll visit your home, walk through your options, and give you a straight answer on
+      pricing.</p>
+    <div class="contact-btns">
+      <a href="tel:+13176890759" class="btn-primary">Call (317) 689-0759</a>
+      <a href="contact.html" class="btn-outline">Request Online</a>
+    </div>
+  </div>
+
+  <!-- DUAL MAPS -->
+  <section>
+    <div class="maps-inner">
+      <p class="section-label">Our Location</p>
+      <h2 class="section-title">Find The Window Shop of North Indy</h2>
+      <div class="maps-grid">
+        <div class="map-box">
+          <div class="map-label">&#128205; Our Office &mdash; Carmel, IN</div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d783999.3978116135!2d-86.74597922796721!3d39.863089490369454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4e8eaad7a870235%3A0xe9b79f84567f61e4!2sThe%20Window%20Shop%20of%20North%20Indy!5e0!3m2!1sen!2s!4v1777235052177!5m2!1sen!2s"
+            style="border:0;" allowfullscreen="" loading="lazy" title="Office Location"></iframe>
+        </div>
+        <div class="map-box">
+          <div class="map-label">&#127758; Service Area Map</div>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1jvKICkbkMDeRgA3olRwTYHpVlSt-zX8&ehbc=2E312F"
+            style="border:0;" loading="lazy" title="Service Area Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp"
+          alt="The Window Shop of North Indy">
+        <p>Locally owned window and door replacement company serving Carmel, Indianapolis, Fishers, Westfield,
+          Noblesville, Zionsville, and all of North Central Indiana. Honest pricing, no pressure, real results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html">Free Quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+13176890759">(317) 689-0759</a>
+        <a href="mailto:hello@windowshopindy.com">hello@windowshopindy.com</a>
+        <span style="font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.6;">550 Congressional Blvd, Suite 390
+          #1101, Carmel, IN 46032</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Window Shop of North Indy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+
+</html>

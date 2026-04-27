@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About The Window Shop of North Indy | Carmel & Hamilton County | Vercel</title>
+  <meta name="description" content="Meet the team at The Window Shop of North Indy. Owner-operated, Carmel-based window & door replacement serving all of Hamilton and Boone Counties.">
+  <link rel="icon" type="image/webp" href="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#1a3a5c;--blue-mid:#1e5080;--blue-light:#2a6fa8;--yellow:#f5c518;--yellow-dark:#d4a800;--white:#ffffff;--off-white:#f7f8fa;--gray:#6b7280;--dark:#111827;--border:#e5e7eb;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);line-height:1.65;}
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+
+    header{position:sticky;top:0;z-index:100;background:var(--blue);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;box-shadow:0 2px 16px rgba(0,0,0,.18);}
+    .logo img{height:44px;width:auto;}
+    nav{display:flex;gap:28px;align-items:center;}
+    nav a{color:rgba(255,255,255,.88);font-size:.9rem;font-weight:500;transition:color .2s;}
+    nav a:hover{color:var(--yellow);}
+    .nav-cta{background:var(--yellow);color:var(--blue)!important;font-weight:600!important;padding:9px 20px;border-radius:4px;font-size:.875rem!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;}
+    .mobile-nav{display:none;position:fixed;top:70px;left:0;right:0;background:var(--blue);padding:20px 5%;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:99;}
+    .mobile-nav.open{display:flex;}
+    .mobile-nav a{color:rgba(255,255,255,.9);font-size:1rem;font-weight:500;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+
+    .page-hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 100%);padding:80px 5% 70px;text-align:center;}
+    .page-hero p.label{color:rgba(245,197,24,.9);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+    .page-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.2;margin-bottom:18px;}
+    .page-hero span{color:var(--yellow);font-style:italic;}
+    .page-hero .lead{color:rgba(255,255,255,.78);max-width:600px;margin:0 auto;font-size:1.05rem;font-weight:300;}
+
+    section{padding:72px 5%;}
+    .section-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-light);margin-bottom:10px;}
+    h2.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--blue);line-height:1.25;margin-bottom:16px;}
+
+    .story-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+    .story-text p{color:var(--gray);margin-bottom:18px;font-size:.97rem;line-height:1.75;}
+    .story-img{border-radius:10px;overflow:hidden;position:relative;}
+    .story-img img{width:100%;height:380px;object-fit:cover;border-radius:10px;}
+    .story-img-badge{position:absolute;bottom:18px;right:18px;background:var(--blue);color:#fff;padding:12px 16px;border-radius:6px;font-size:.82rem;line-height:1.45;}
+    .story-img-badge strong{color:var(--yellow);font-size:1.1rem;display:block;}
+
+    .highlights-bg{background:var(--off-white);}
+    .highlights-header{text-align:center;max-width:580px;margin:0 auto 44px;}
+    .highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;}
+    .highlight-card{background:var(--white);border-radius:8px;padding:30px 26px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:3px solid var(--yellow);}
+    .highlight-icon{font-size:2rem;margin-bottom:14px;}
+    .highlight-card h3{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--blue);margin-bottom:10px;}
+    .highlight-card p{font-size:.9rem;color:var(--gray);line-height:1.65;}
+
+    .philosophy-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+    .philosophy-text p{color:var(--gray);margin-bottom:18px;font-size:.97rem;}
+    .philosophy-box{background:var(--blue);border-radius:10px;padding:40px 36px;}
+    .philosophy-box h3{font-family:'DM Serif Display',serif;color:#fff;font-size:1.5rem;margin-bottom:18px;}
+    .philosophy-box p{color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.7;margin-bottom:14px;}
+
+    .citations-bg{background:var(--off-white);}
+    .citations-inner{max-width:900px;margin:0 auto;}
+    .citations-inner h2{margin-bottom:8px;}
+    .citations-desc{color:var(--gray);margin-bottom:24px;font-size:.95rem;}
+    .citations-list{display:flex;flex-direction:column;gap:8px;}
+    .citation-item{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:11px 18px;}
+    .citation-item a{color:var(--blue-light);font-size:.85rem;word-break:break-all;line-height:1.5;}
+    .citation-item a:hover{color:var(--blue);text-decoration:underline;}
+
+    .cta-section{background:var(--blue);text-align:center;padding:80px 5%;}
+    .cta-section h2{font-family:'DM Serif Display',serif;color:#fff;font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px;}
+    .cta-section p{color:rgba(255,255,255,.78);max-width:500px;margin:0 auto 30px;}
+    .btn-primary{background:var(--yellow);color:var(--blue);font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:4px;transition:background .2s;display:inline-block;}
+    .btn-primary:hover{background:var(--yellow-dark);}
+    .btn-outline{border:2px solid rgba(255,255,255,.55);color:var(--white);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:4px;transition:border-color .2s;display:inline-block;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+    footer{background:var(--dark);color:rgba(255,255,255,.65);padding:48px 5% 28px;}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 36px;}
+    .footer-brand p{font-size:.88rem;margin-top:14px;line-height:1.7;}
+    .footer-brand img{height:38px;}
+    .footer-col h4{color:#fff;font-size:.9rem;font-weight:600;margin-bottom:14px;}
+    .footer-col a{display:block;font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:8px;transition:color .2s;}
+    .footer-col a:hover{color:var(--yellow);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;text-align:center;font-size:.82rem;max-width:1100px;margin:0 auto;}
+
+    @media(max-width:900px){
+      nav{display:none;}.hamburger{display:flex;}
+      .story-inner,.philosophy-inner{grid-template-columns:1fr;}
+      .highlights-grid{grid-template-columns:1fr 1fr;}
+      .footer-inner{grid-template-columns:1fr 1fr;}
+      .footer-brand{grid-column:1/-1;}
+    }
+    @media(max-width:600px){
+      .highlights-grid,.footer-inner{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo"><img src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp" alt="The Window Shop of North Indy Logo"></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="nav-cta">Free Quote</a>
+  </nav>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get Free Quote</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <p class="label">Our Story</p>
+  <h1>Carmel-Based. <span>Community-Trusted.</span></h1>
+  <p class="lead">The Window Shop of North Indy was built around one idea: homeowners in Carmel and North Indy deserve a window company they can actually rely on.</p>
+</div>
+
+<!-- STORY -->
+<section>
+  <div class="story-inner">
+    <div class="story-text">
+      <p class="section-label">How We Got Here</p>
+      <h2 class="section-title">A Local Business, Built the Right Way</h2>
+      <p>Ward Walker grew up around the home improvement industry and spent years in window sales watching homeowners navigate a market full of misleading tactics. High-pressure consultations, phantom discounts, and subcontractors who treated each job like a quick payday.</p>
+      <p>Starting his own company was the answer. The Window Shop of North Indy handles full window and door replacement only, with Ward personally overseeing each project to make sure the work matches the promise.</p>
+      <p>Every customer gets Ward's direct contact. Not a project manager, not a scheduler. The owner. That accountability is built into how this company operates from day one.</p>
+      <p>We serve homeowners throughout Carmel, Indianapolis, Fishers, Westfield, Noblesville, Zionsville, and across Hamilton, Boone, and northern Marion Counties.</p>
+    </div>
+    <div class="story-img">
+      <img src="https://lh3.googleusercontent.com/p/AF1QipOFjWyre61uqJbkL_Kq1aryRL_9ajIdheiHQWcg=s1360-w1360-h1020-rw" alt="The Window Shop of North Indy team" loading="lazy">
+      <div class="story-img-badge"><strong>Ward Walker</strong>Owner &amp; Founder</div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights-bg">
+  <div class="highlights-header">
+    <p class="section-label">What Makes Us Different</p>
+    <h2 class="section-title">Six Things That Set Us Apart</h2>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card"><div class="highlight-icon">&#128276;</div><h3>Owners Are Your Contact</h3><p>Ward Walker is directly reachable throughout your project. You'll never be handed off to someone who doesn't know your job.</p></div>
+    <div class="highlight-card"><div class="highlight-icon">&#9889;</div><h3>Energy-Efficient Windows</h3><p>We carry products selected specifically for performance. Indiana winters are cold. Your windows should keep that cold outside.</p></div>
+    <div class="highlight-card"><div class="highlight-icon">&#128296;</div><h3>Meticulous Installation</h3><p>Our professionally trained installation contractors take their time and do it right. Clean work, clean site, every single time.</p></div>
+    <div class="highlight-card"><div class="highlight-icon">&#128179;</div><h3>Transparent Pricing</h3><p>No "special deals" that disappear. No hidden fees. What we quote is what you pay, with no surprises at the end.</p></div>
+    <div class="highlight-card"><div class="highlight-icon">&#127959;</div><h3>Full Replacement Focus</h3><p>We specialize in complete window and door replacement. Not patch jobs, not quick fixes. Just thorough, lasting upgrades.</p></div>
+    <div class="highlight-card"><div class="highlight-icon">&#128203;</div><h3>Lifetime Warranty Coverage</h3><p>Lifetime coverage on frames, hardware, and components, plus a 12-year insulated glass seal warranty and 5-year labor guarantee.</p></div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section>
+  <div class="philosophy-inner">
+    <div class="philosophy-text">
+      <p class="section-label">Our Philosophy</p>
+      <h2 class="section-title">Local, Chill, Uncomplicated</h2>
+      <p>Our three-word operating principle is local, chill, uncomplicated. It means we show up prepared, explain things plainly, give you one fair number, and leave the decision entirely up to you.</p>
+      <p>We're rooted here. Carmel is our home base and the surrounding communities are where our customers live. Every job is a direct reflection of our name in this area.</p>
+      <p>We'll tell you honestly if something doesn't require full replacement. We've walked away from jobs that weren't right for us. Integrity over revenue is a real policy here.</p>
+    </div>
+    <div class="philosophy-box">
+      <h3>Why Customers Keep Referring Us</h3>
+      <p>People refer us because the experience matches what we promised. No surprises on price, no shortcuts in the work, and a finished product they're genuinely happy with.</p>
+      <p>In a market where homeowners are often skeptical, we've built a reputation that does the selling for us. Most of our new business comes directly from past customers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CITATIONS / DIRECTORY LISTINGS -->
+<section class="citations-bg">
+  <div class="citations-inner">
+    <p class="section-label">Find Us Online</p>
+    <h2 class="section-title">Our Directory Listings</h2>
+    <p class="citations-desc">Verify our business information across the web at any of these trusted directories.</p>
+    <div class="citations-list">
+      <div class="citation-item"><a href="https://www.yelp.com/biz/the-window-shop-westfield-2" target="_blank" rel="noopener">https://www.yelp.com/biz/the-window-shop-westfield-2</a></div>
+      <div class="citation-item"><a href="https://www.brownbook.net/business/54814449/the-window-shop-of-north-indy" target="_blank" rel="noopener">https://www.brownbook.net/business/54814449/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://www.blinx.biz/the-window-shop-of-north-indy" target="_blank" rel="noopener">https://www.blinx.biz/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://www.storeboard.com/thewindowshopofnorthindy" target="_blank" rel="noopener">https://www.storeboard.com/thewindowshopofnorthindy</a></div>
+      <div class="citation-item"><a href="https://www.callupcontact.com/b/businessprofile/The_Window_Shop_of_North_Indy/9973067" target="_blank" rel="noopener">https://www.callupcontact.com/b/businessprofile/The_Window_Shop_of_North_Indy/9973067</a></div>
+      <div class="citation-item"><a href="https://www.topgoogle.com/listing/the-window-shop-of-north-indy/" target="_blank" rel="noopener">https://www.topgoogle.com/listing/the-window-shop-of-north-indy/</a></div>
+      <div class="citation-item"><a href="https://www.addonbiz.com/listing/550-congressional-blvd-suite-390-1101-carmel-in-46032-the-window-shop-of-north-indy/" target="_blank" rel="noopener">https://www.addonbiz.com/listing/550-congressional-blvd-suite-390-1101-carmel-in-46032-the-window-shop-of-north-indy/</a></div>
+      <div class="citation-item"><a href="https://www.supplyautonomy.com/thewindowshopofnorthindy.us" target="_blank" rel="noopener">https://www.supplyautonomy.com/thewindowshopofnorthindy.us</a></div>
+      <div class="citation-item"><a href="http://www.askmap.net/location/7711802/united-states/the-window-shop-of-north-indy" target="_blank" rel="noopener">http://www.askmap.net/location/7711802/united-states/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://bizidex.com/en/the-window-shop-of-north-indy-window-treatments-876006" target="_blank" rel="noopener">https://bizidex.com/en/the-window-shop-of-north-indy-window-treatments-876006</a></div>
+      <div class="citation-item"><a href="https://ezlocal.com/in/carmel/window-replacement/0919528261" target="_blank" rel="noopener">https://ezlocal.com/in/carmel/window-replacement/0919528261</a></div>
+      <div class="citation-item"><a href="https://freebusinessdirectory.com//search_res_show.php?co=660493" target="_blank" rel="noopener">https://freebusinessdirectory.com//search_res_show.php?co=660493</a></div>
+      <div class="citation-item"><a href="https://localitybiz.com/38840295/the-window-shop-of-north-indy-carmel" target="_blank" rel="noopener">https://localitybiz.com/38840295/the-window-shop-of-north-indy-carmel</a></div>
+      <div class="citation-item"><a href="https://trueen.com/business/listing/the-window-shop-of-north-indy/707552" target="_blank" rel="noopener">https://trueen.com/business/listing/the-window-shop-of-north-indy/707552</a></div>
+      <div class="citation-item"><a href="https://www.cybo.com/US-biz/the-window-shop-of-north-indy" target="_blank" rel="noopener">https://www.cybo.com/US-biz/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://www.youbiz.com/listing/the-window-shop-of-north-indy.html" target="_blank" rel="noopener">https://www.youbiz.com/listing/the-window-shop-of-north-indy.html</a></div>
+      <div class="citation-item"><a href="https://www.americansearch.info/carmel/construction-contractors/the-window-shop-of-north-indy" target="_blank" rel="noopener">https://www.americansearch.info/carmel/construction-contractors/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://us.enrollbusiness.com/BusinessProfile/7724396/The%20Window%20Shop%20of%20North%20Indy" target="_blank" rel="noopener">https://us.enrollbusiness.com/BusinessProfile/7724396/The%20Window%20Shop%20of%20North%20Indy</a></div>
+      <div class="citation-item"><a href="https://www.a-zbusinessfinder.com/business-directory/The-Window-Shop-of-North-Indy-Carmel-Indiana-USA/34454591/" target="_blank" rel="noopener">https://www.a-zbusinessfinder.com/business-directory/The-Window-Shop-of-North-Indy-Carmel-Indiana-USA/34454591/</a></div>
+      <div class="citation-item"><a href="https://www.find-us-here.com/businesses/The-Window-Shop-of-North-Indy-Carmel-Indiana-USA/34454591/" target="_blank" rel="noopener">https://www.find-us-here.com/businesses/The-Window-Shop-of-North-Indy-Carmel-Indiana-USA/34454591/</a></div>
+      <div class="citation-item"><a href="https://www.freelistingusa.com/listings/the-window-shop-of-north-indy" target="_blank" rel="noopener">https://www.freelistingusa.com/listings/the-window-shop-of-north-indy</a></div>
+      <div class="citation-item"><a href="https://vppages.com/listing/the-window-shop-of-north-indy/" target="_blank" rel="noopener">https://vppages.com/listing/the-window-shop-of-north-indy/</a></div>
+      <div class="citation-item"><a href="https://sites.google.com/view/the-window-shop-of-north-indy/" target="_blank" rel="noopener">https://sites.google.com/view/the-window-shop-of-north-indy/</a></div>
+      <div class="citation-item"><a href="https://www.instagram.com/windowshopindy/" target="_blank" rel="noopener">https://www.instagram.com/windowshopindy/</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <p class="section-label" style="color:rgba(245,197,24,.9);">Ready to Get Started?</p>
+  <h2>See What New Windows Can Do For Your Home</h2>
+  <p>We'll come to you with no obligation, explain your options clearly, and give you an honest estimate on the spot.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-primary">Request a Free Estimate</a>
+    <a href="tel:+13176890759" class="btn-outline">Call (317) 689-0759</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://windowshopindy.com/wp-content/uploads/2025/08/windowshop-logo-e1756181650973.webp" alt="The Window Shop of North Indy">
+      <p>Locally owned window and door replacement company serving Carmel, Indianapolis, Fishers, Westfield, Noblesville, Zionsville, and all of North Central Indiana.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html">Free Quote</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:+13176890759">(317) 689-0759</a>
+      <a href="mailto:hello@windowshopindy.com">hello@windowshopindy.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 The Window Shop of North Indy. All rights reserved.</p></div>
+</footer>
+
+<script>
+  const btn=document.getElementById('menuBtn');
+  const nav=document.getElementById('mobileNav');
+  btn.addEventListener('click',()=>nav.classList.toggle('open'));
+</script>
+</body>
+</html>
